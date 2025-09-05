@@ -111,37 +111,37 @@ const Portfolio = () => {
 
   const projects = [
     {
-      name: "HealthLock",
-      description: "AI-Powered Healthcare Platform with encrypted health records, AI assessments, and virtual consultations. Built with modern security practices and real-time communication.",
-      tech: ["React", "Node.js", "MongoDB", "TensorFlow.js", "WebRTC"],
-      github: "https://github.com/JACELL100",
+      name: "BharatSecure",
+      description: "Incident Reporting & Response System with AI-powered incident categorization, real-time alerts to authorities, anonymous reporting, safety heatmaps, and 24/7 AI chatbot support for emotional, legal, and medical assistance.",
+      tech: ["React.js", "Django Rest Framework", "SQLite", "NLP", "GPS"],
+      github: "https://github.com/BharatSecure/TechFiesta25.git",
       live: "https://bharat-secure.vercel.app/",
       featured: true,
       color: "from-purple-600 via-violet-600 to-indigo-600"
     },
     {
-      name: "BankFlow",
-      description: "Financial SaaS platform with secure authentication, real-time transactions, and seamless bank integration for modern banking needs.",
-      tech: ["Next.js", "Django", "PostgreSQL"],
-      github: "https://github.com/JACELL100",
+      name: "TravelSafeAI",
+      description: "Personalized Itinerary & Safety Planner with real-time crime insights, AI-powered route safety scoring, crowdsourced safety reports, and AI travel risk forecasting using Google Gemini LLM.",
+      tech: ["React + Vite", "Node.js + Express", "MongoDB", "Google Gemini LLM", "OpenStreetMap"],
+      github: "https://github.com/Shane-Dias/PlanMyTrip.git",
       live: "https://travel-safe-ai-jqdm.vercel.app/",
       featured: true,
       color: "from-emerald-600 via-teal-600 to-cyan-600"
     },
     {
-      name: "WealthGrow",
-      description: "Investment management platform for stocks, bonds, and cryptocurrencies with real-time data visualization and portfolio analytics.",
-      tech: ["React", "Django", "PostgreSQL"],
-      github: "https://github.com/JACELL100",
+      name: "BrightBuilds",
+      description: "Creative coding showcase platform for student projects mapped to UN SDGs. Features role-based dashboards, project ratings, mentorship system, and community collaboration tools.",
+      tech: ["React", "Node.js", "MongoDB", "JWT", "Tailwind CSS"],
+      github: "https://github.com/JACELL100/FSD.git",
       live: "https://bright-builds.vercel.app/",
       featured: false,
       color: "from-violet-600 via-purple-600 to-fuchsia-600"
     },
     {
-      name: "LatteHeaven",
-      description: "Coffee shop-themed website - 2nd Runner-Up at GDSC UI/UX Competition 2024. Focus on user experience and modern design principles.",
-      tech: ["React", "Figma", "CSS"],
-      github: "https://github.com/JACELL100",
+      name: "SwaadSupplier",
+      description: "Raw material sourcing platform for street food vendors with Gemini-powered AI ingredient estimation, blockchain trust system, FSSAI verification, and smart supplier matching.",
+      tech: ["React", "Node.js", "MongoDB", "Solidity", "Gemini AI"],
+      github: "https://github.com/JACELL100/SwaadSupplier.git",
       live: "https://swaad-supplier.vercel.app/",
       featured: false,
       color: "from-orange-500 via-rose-500 to-pink-600"
@@ -162,12 +162,11 @@ const Portfolio = () => {
   const skills = {
     "Frontend": ["HTML", "CSS", "JavaScript", "React", "Next.js", "TypeScript"],
     "Backend": ["Django", "Node.js", "Express", "REST APIs"],
-    "Database": ["MongoDB", "PostgreSQL", "Redis"],
     "Design": ["Figma", "Canva", "Framer", "Adobe XD"],
     "Programming": ["C", "Python", "Solidity", "JavaScript"],
     "Web3": ["Solidity", "MetaMask", "Remix IDE", "Hardhat"],
-    "DevOps": ["Git", "Docker", "Vercel", "AWS"],
-    "Other": ["Video Editing", "Unreal Engine", "Arduino", "IoT"]
+    "IoT": ["Arduino", "Arduino IDE", "Sensor Integration", "Embedded Systems"],
+    "Other": ["Video Editing", "Unreal Engine", "Git", "Vercel"]
   };
 
   const FloatingOrb = ({ delay = 0 }) => (
@@ -190,13 +189,13 @@ const Portfolio = () => {
   );
 
   const ProjectCard = ({ project, index }) => (
-    <div className={`group relative ${project.featured ? 'md:col-span-2' : ''} transform hover:scale-[1.02] transition-all duration-500`}>
+    <div className={`group relative transform hover:scale-[1.02] transition-all duration-500 flex`}>
       <div className="absolute -inset-0.5 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition duration-700 blur-sm rounded-3xl"
            style={{ background: `linear-gradient(45deg, ${project.color.replace('from-', '').replace(' via-', ', ').replace(' to-', ', ')})` }}>
       </div>
-      <div className="relative bg-gray-900/70 backdrop-blur-xl rounded-3xl p-8 border border-gray-800/50 group-hover:border-purple-500/30 transition-all duration-700 h-full">
+      <div className="relative bg-gray-900/70 backdrop-blur-xl rounded-3xl p-8 border border-gray-800/50 group-hover:border-purple-500/30 transition-all duration-700 h-full flex flex-col w-full">
         <div className="flex items-start justify-between mb-6">
-          <div>
+          <div className="flex-1">
             <h3 className="text-2xl font-bold mb-2 group-hover:text-white transition-colors duration-300">
               <GradientText>{project.name}</GradientText>
             </h3>
@@ -207,13 +206,13 @@ const Portfolio = () => {
               </span>
             )}
           </div>
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-r opacity-90 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-r opacity-90 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 flex-shrink-0"
                style={{ background: `linear-gradient(45deg, ${project.color.replace('from-', '').replace(' via-', ', ').replace(' to-', ', ')})` }}>
             <Code className="w-7 h-7 text-white" />
           </div>
         </div>
         
-        <p className="text-gray-400 mb-6 leading-relaxed text-base">{project.description}</p>
+        <p className="text-gray-400 mb-6 leading-relaxed text-base flex-grow">{project.description}</p>
         
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tech.map((tech, techIndex) => (
@@ -224,7 +223,7 @@ const Portfolio = () => {
           ))}
         </div>
         
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-6 mt-auto">
           <a href={project.github} 
              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-all duration-300 group/link">
             <Github className="w-4 h-4" />
@@ -456,7 +455,7 @@ const Portfolio = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
             ))}
@@ -476,7 +475,7 @@ const Portfolio = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {Object.entries(skills).map(([category, skillList], index) => (
               <div key={index} className="group relative transform hover:scale-105 transition-all duration-300">
                 <div className="bg-gray-900/40 backdrop-blur-2xl rounded-3xl p-6 border border-gray-800/50 group-hover:border-purple-500/30 transition-all duration-500 h-full shadow-xl shadow-purple-500/5">
