@@ -694,7 +694,7 @@ const Portfolio = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto my-12">
               {[
                 { value: "5+", label: "Hackathon Wins" },
-                { value: "8.0", label: "CGPA" },
+                { value: "8.5", label: "CGPA" },
                 { value: "15+", label: "Technologies" },
                 { value: "4+", label: "Major Projects" }
               ].map((stat, index) => (
