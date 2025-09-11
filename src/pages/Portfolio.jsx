@@ -259,7 +259,7 @@ const Portfolio = () => {
       live: "https://bharat-secure.vercel.app/",
       featured: true,
       color: "from-purple-600 via-violet-600 to-indigo-600",
-      image: "/images/bs.png"
+      image: "/images/bs.jpeg"
     },
     {
       name: "TravelSafeAI",
@@ -269,7 +269,7 @@ const Portfolio = () => {
       live: "https://travel-safe-ai-jqdm.vercel.app/",
       featured: true,
       color: "from-emerald-600 via-teal-600 to-cyan-600",
-      image: "/images/ts.png"
+      image: "/images/ts.jpeg"
     },
     {
       name: "BrightBuilds",
@@ -289,7 +289,7 @@ const Portfolio = () => {
       live: "https://swaad-supplier.vercel.app/",
       featured: false,
       color: "from-orange-500 via-rose-500 to-pink-600",
-      image: "/images/ss.png"
+      image: "/images/ss.jpeg"
     }
   ];
 
